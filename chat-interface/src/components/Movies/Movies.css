@@ -1,0 +1,16 @@
+.movie-widget {
+    color: #1d1d1d;
+    background-color: rgb(246, 91, 102);
+}
+
+.movie-widget-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.movie-widget-list-item {
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: left;
+}

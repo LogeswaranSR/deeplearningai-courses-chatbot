@@ -15,6 +15,11 @@ class ActionProvider {
      this.createCustomMessage = createCustomMessage;
    }
 
+   greet = () => {
+    const greeting = this.createChatBotMessage("Hello there!. I am Loki");
+    this.setChatbotMessage(greeting)
+   }
+
    setChatbotMessage = (message) => {
     this.setState(state => ({ ...state, messages: [...state.messages, message]}))
    }
@@ -22,6 +27,27 @@ class ActionProvider {
    helloWorldHandler = () => {
     const message = this.createChatBotMessage("Hello. I am not self-aware.")
     this.setChatbotMessage(message)
+   }
+
+   todosHandler = () => {
+    const message = this.createChatBotMessage("Todo List:", {
+      widget: 'todos'
+    })
+    this.setChatbotMessage(message)
+   }
+
+   moviesHandler = () => {
+    const message = this.createChatBotMessage("Sure. Here are some movies currently in our Database.", {
+      widget: 'movieList'
+    })
+    this.setChatbotMessage(message)
+   }
+
+   optionsHandler = () => {
+    const message = this.createChatBotMessage("Here are our Programming Language Options:", {
+      widget: 'options'
+    })
+    this.setChatbotMessage(message);
    }
 }
  

@@ -13,6 +13,22 @@ class MessageParser {
       if(lowercase.includes("hello")){
         this.actionProvider.helloWorldHandler();
       }
+
+      if(lowercase.includes("hi")){
+        this.actionProvider.greet();
+      }
+
+      if(lowercase.includes("todos")){
+        this.actionProvider.todosHandler();
+      }
+
+      if(lowercase.includes('movie')){
+        this.actionProvider.moviesHandler();
+      }
+
+      if(lowercase.includes('prog')){
+        this.actionProvider.optionsHandler();
+      }
     }
 }
   
